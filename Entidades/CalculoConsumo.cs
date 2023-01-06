@@ -20,21 +20,17 @@ namespace ConsumoCombustivel.Entidades
 
             var valorValidado = ValidarOsValores(quantidadeCombustivel, quilometragem);
 
-            if (valorValidado != null && valorValidado == true)
+            if (valorValidado == true)
             {
                 CalcularConsumo(quantidadeCombustivel, quilometragem);
             }
-
+            Console.WriteLine("Houve um erro com os valores informado!");
+            
         }
 
         public bool ValidarOsValores(double quantidadeCombustivel, double quilometragem)
         {
-            if (quantidadeCombustivel == null || quilometragem == null)
-            {
-                Console.WriteLine("\nO valor inserido foi nulo!");
-                return false;
-            }
-            else if (quantidadeCombustivel <= 0.0 || quilometragem <= 0.0)
+            if (quantidadeCombustivel <= 0.0 || quilometragem <= 0.0)
             {
                 Console.WriteLine("\nO valor não pode ser menor que zero!");
                 return false;
