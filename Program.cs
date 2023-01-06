@@ -1,10 +1,12 @@
-﻿namespace ConsumoCombustivel
+﻿using ConsumoCombustivel.Entidades;
+namespace ConsumoCombustivel
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            CalculoConsumo calculo = new CalculoConsumo();
+            calculo.CapturaValores();
         }
     }
 }
