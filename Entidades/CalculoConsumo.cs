@@ -28,7 +28,7 @@ namespace ConsumoCombustivel.Entidades
             
         }
 
-        public bool ValidarOsValores(double quantidadeCombustivel, double quilometragem)
+        private bool ValidarOsValores(double quantidadeCombustivel, double quilometragem)
         {
             if (quantidadeCombustivel <= 0.0 || quilometragem <= 0.0)
             {
