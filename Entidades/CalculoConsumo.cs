@@ -41,7 +41,7 @@ namespace ConsumoCombustivel.Entidades
         public void CalcularConsumo(double quantidadeCombustivel, double quilometragem)
         {
             double media = quilometragem / quantidadeCombustivel;
-            Console.WriteLine("\nO consumo médio do seu veículo é: " + media + "Km/l");
+            Console.WriteLine($"\nO consumo médio do seu veículo é: {media.ToString("C2")} Km/l");
         }
     }
 }
