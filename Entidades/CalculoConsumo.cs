@@ -20,12 +20,14 @@ namespace ConsumoCombustivel.Entidades
 
             var valorValidado = ValidarOsValores(quantidadeCombustivel, quilometragem);
 
-            if (valorValidado == true)
+            if (valorValidado == false)
+            {
+                Console.WriteLine("Houve um erro com os valores informado!");
+            }
+            else
             {
                 CalcularConsumo(quantidadeCombustivel, quilometragem);
             }
-            Console.WriteLine("Houve um erro com os valores informado!");
-            
         }
 
         private bool ValidarOsValores(double quantidadeCombustivel, double quilometragem)
